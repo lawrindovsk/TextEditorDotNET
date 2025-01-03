@@ -17,11 +17,11 @@ class Program
     static void Menu()
     {
 
-        Console.WriteLine("Bem vindo ao Editor de Texto!");
-        Console.WriteLine("Escolha a baixo a opção desejada:");
-        Console.WriteLine("0 - Sair");
-        Console.WriteLine("1 - Abrir arquivo");
-        Console.WriteLine("2 - Criar novo arquivo");
+        Console.WriteLine("Welcome to the Text Editor!");
+        Console.WriteLine("Choose your option:");
+        Console.WriteLine("0 - Exit");
+        Console.WriteLine("1 - Open File");
+        Console.WriteLine("2 - Create a new File");
 
 
         short option = short.Parse(Console.ReadLine());
@@ -30,7 +30,7 @@ class Program
         {
             case 0: Environment.Exit(0); break;
             case 1: OpenFile(); break;
-            case 2: CreateFile(); break;
+            case 2: EditFile(); break;
 
             default: Menu(); break;
         }
@@ -40,6 +40,23 @@ class Program
     public static void OpenFile()
     { }
 
-    public static void CreateFile()
-    { }
+    public static void EditFile()
+    {
+        Console.Clear();
+        Console.WriteLine("Type your text bellow (ESC to finish)");
+        Console.WriteLine("-----------------------------------");
+
+        string textUser = "";// Every text will be stored here.
+
+        while (Console.ReadKey().Key != ConsoleKey.Escape)// if user press ESC, the loop will stop.
+        {
+            //the function is being thought about how to do it!.
+        }
+
+
+
+
+
+
+    }
 }
